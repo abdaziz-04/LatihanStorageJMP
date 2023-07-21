@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LatihanStorage</string>
+    <string name="txt_buat_file">Halooo\n</string>
+    <string name="ubah_file">Ngubah File\n</string>
+</resources>
