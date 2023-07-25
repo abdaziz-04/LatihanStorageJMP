@@ -52,11 +52,11 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
 
     }
 
-    public boolean checkStoragePermissions(){
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.R){
+    public boolean checkStoragePermissions() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             //Android is 11 (R) or above
             return Environment.isExternalStorageManager();
-        }else {
+        } else {
             //Below android 11
             int write = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
             int read = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
@@ -66,13 +66,11 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
     }
 
 
-
     public boolean periksaIzinPenyimpanan() {
         ActivityCompat.requestPermissions(EksternalActivity.this,
                 new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
         return true;
     }
-
 
 
     @Override
@@ -116,7 +114,7 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
             return;
         }
         File file = new File(Environment.getExternalStorageDirectory(), FILENAME);
-        Log.d("ExternalActivity", "Location : "+Environment.getExternalStorageDirectory());
+        Log.d("ExternalActivity", "Location : " + Environment.getExternalStorageDirectory());
 
         FileOutputStream outputStream = null;
         try {
@@ -134,7 +132,7 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
         File sdcard = Environment.getExternalStorageDirectory();
         File file = new File(sdcard, FILENAME);
 
-        if(file.exists()) {
+        if (file.exists()) {
 
             StringBuilder text = new StringBuilder();
 
@@ -162,7 +160,6 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
-
     @Override
     public void onClick(View v) {
         int viewId = v.getId();
@@ -175,7 +172,6 @@ public class EksternalActivity extends AppCompatActivity implements View.OnClick
                 Log.d("ExternalActivity", "false");
             }
         }
-
     }
 
     public void jalankanPerintah(int id) {

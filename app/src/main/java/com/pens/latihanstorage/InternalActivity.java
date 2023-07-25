@@ -105,15 +105,6 @@ public class InternalActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
-//    @Override
-//    public void onClick(View v) {
-//        jalankanPerintah(v.getId());
-//    }
-
-    public void jalankanPerintah(int id) {
-
-    }
-
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.buttonBuatFile) {
